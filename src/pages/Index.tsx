@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -13,62 +14,68 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
-        <div className="container mx-auto max-w-6xl px-4 py-16 lg:py-24">
-          <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
-            <div>
-              <h1 className="text-4xl font-bold mb-4 md:text-5xl lg:text-6xl">
-                Detect Service Issues in Your Code
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                Automatically audit your codebase for service system issues, security vulnerabilities, and performance bottlenecks.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-white text-blue-800 hover:bg-blue-50"
-                  onClick={() => setIsOnboardingOpen(true)}
-                >
-                  Start Audit Now
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="bg-white text-blue-800 hover:bg-blue-50"
-                  onClick={() => navigate('/dashboard')}
-                >
-                  View Dashboard
-                </Button>
+      {/* Hero Section with the uploaded image */}
+      <section className="relative text-white">
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div 
+          className="relative w-full bg-cover bg-center min-h-[600px] flex items-center"
+          style={{ backgroundImage: "url('/lovable-uploads/6db13aea-fbff-477f-9b75-38ee70b2c361.png')" }}
+        >
+          <div className="container mx-auto max-w-6xl px-4 py-16 lg:py-24 z-20 relative">
+            <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
+              <div>
+                <h1 className="text-4xl font-bold mb-4 md:text-5xl lg:text-6xl drop-shadow-lg">
+                  Detect Service Issues in Your Code
+                </h1>
+                <p className="text-xl mb-8 text-white drop-shadow-md">
+                  Automatically audit your codebase for service system issues, security vulnerabilities, and performance bottlenecks.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    size="lg"
+                    className="bg-yellow-500 text-blue-900 hover:bg-yellow-400"
+                    onClick={() => setIsOnboardingOpen(true)}
+                  >
+                    Start Audit Now
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="text-white border-white hover:bg-white/10"
+                    onClick={() => navigate('/dashboard')}
+                  >
+                    View Dashboard
+                  </Button>
+                </div>
               </div>
-            </div>
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-md">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-teal-400 rounded-lg opacity-50 blur"></div>
-                <div className="relative bg-white dark:bg-gray-900 rounded-lg shadow-xl overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <ShieldCheckIcon className="h-8 w-8 text-blue-600 mr-3" />
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Security Score</h3>
-                      <div className="ml-auto flex items-center justify-center rounded-full w-12 h-12 bg-blue-100 dark:bg-blue-900">
-                        <span className="text-blue-600 dark:text-blue-400 font-bold">85</span>
+              <div className="flex justify-center">
+                <div className="relative w-full max-w-md">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-teal-400 rounded-lg opacity-50 blur"></div>
+                  <div className="relative bg-white dark:bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                    <div className="p-6">
+                      <div className="flex items-center mb-4">
+                        <ShieldCheckIcon className="h-8 w-8 text-blue-600 mr-3" />
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Security Score</h3>
+                        <div className="ml-auto flex items-center justify-center rounded-full w-12 h-12 bg-blue-100 dark:bg-blue-900">
+                          <span className="text-blue-600 dark:text-blue-400 font-bold">85</span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex items-center text-sm">
-                        <AlertTriangleIcon className="h-4 w-4 text-red-500 mr-2" />
-                        <span className="text-gray-700 dark:text-gray-300">Critical issues detected</span>
-                        <span className="ml-auto font-semibold text-gray-900 dark:text-white">2</span>
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <ActivityIcon className="h-4 w-4 text-orange-500 mr-2" />
-                        <span className="text-gray-700 dark:text-gray-300">Performance issues</span>
-                        <span className="ml-auto font-semibold text-gray-900 dark:text-white">5</span>
-                      </div>
-                      <div className="flex items-center text-sm">
-                        <CodeIcon className="h-4 w-4 text-blue-500 mr-2" />
-                        <span className="text-gray-700 dark:text-gray-300">Files analyzed</span>
-                        <span className="ml-auto font-semibold text-gray-900 dark:text-white">127</span>
+                      <div className="space-y-3">
+                        <div className="flex items-center text-sm">
+                          <AlertTriangleIcon className="h-4 w-4 text-red-500 mr-2" />
+                          <span className="text-gray-700 dark:text-gray-300">Critical issues detected</span>
+                          <span className="ml-auto font-semibold text-gray-900 dark:text-white">2</span>
+                        </div>
+                        <div className="flex items-center text-sm">
+                          <ActivityIcon className="h-4 w-4 text-orange-500 mr-2" />
+                          <span className="text-gray-700 dark:text-gray-300">Performance issues</span>
+                          <span className="ml-auto font-semibold text-gray-900 dark:text-white">5</span>
+                        </div>
+                        <div className="flex items-center text-sm">
+                          <CodeIcon className="h-4 w-4 text-blue-500 mr-2" />
+                          <span className="text-gray-700 dark:text-gray-300">Files analyzed</span>
+                          <span className="ml-auto font-semibold text-gray-900 dark:text-white">127</span>
+                        </div>
                       </div>
                     </div>
                   </div>
