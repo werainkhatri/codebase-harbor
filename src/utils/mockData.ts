@@ -3,7 +3,7 @@ import { Alarm, AlarmSeverity, Codebase, Report } from "@/types";
 
 export const mockCodebases: Codebase[] = [
   {
-    id: "code-1",
+    id: "report-1",
     name: "Frontend Service",
     source: "GitHub",
     dateAdded: "2023-11-15",
@@ -12,7 +12,7 @@ export const mockCodebases: Codebase[] = [
     repoUrl: "https://github.com/user/frontend-service"
   },
   {
-    id: "code-2",
+    id: "report-2",
     name: "Authentication API",
     source: "GitHub",
     dateAdded: "2023-11-10",
@@ -21,7 +21,7 @@ export const mockCodebases: Codebase[] = [
     repoUrl: "https://github.com/user/auth-api"
   },
   {
-    id: "code-3",
+    id: "report-3",
     name: "Payment Service",
     source: "Upload",
     dateAdded: "2023-11-05",

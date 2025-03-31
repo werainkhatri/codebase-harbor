@@ -18,6 +18,7 @@ const ReportDetail = () => {
   const [activeTab, setActiveTab] = useState("all");
 
   const report = id ? getReportById(id) : undefined;
+  console.log(getReportById(id));
   const codebase = id ? getCodebaseById(id) : undefined;
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const ReportDetail = () => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -41,7 +42,7 @@ const ReportDetail = () => {
     );
   }
 
-  const filteredAlarms = activeTab === "all" 
+  const filteredAlarms = activeTab === "all"
     ? report.alarms
     : report.alarms.filter(alarm => alarm.severity === activeTab);
 
@@ -75,22 +76,22 @@ const ReportDetail = () => {
           ) : (
             <>
               <ReportSummary report={report} />
-            
+
               <Card className="mt-6">
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg font-medium">Actions</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="w-full justify-start"
                     onClick={() => {}}
                   >
                     <RefreshCwIcon className="h-4 w-4 mr-2" />
                     Rescan Codebase
                   </Button>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="w-full justify-start"
                     onClick={() => {}}
                   >
