@@ -23,17 +23,17 @@ const Index = () => {
                 Automatically audit your codebase for alarm system issues, security vulnerabilities, and performance bottlenecks.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="bg-white text-blue-800 hover:bg-blue-50"
                   onClick={() => setIsOnboardingOpen(true)}
                 >
                   Start Audit Now
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-white text-white hover:bg-blue-800"
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-white text-blue-800 hover:bg-blue-50"
                   onClick={() => navigate('/dashboard')}
                 >
                   View Dashboard
@@ -120,8 +120,8 @@ const Index = () => {
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Start your first audit today and get actionable insights to improve your code's security and performance.
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-blue-600 hover:bg-blue-700"
             onClick={() => setIsOnboardingOpen(true)}
           >
@@ -130,9 +130,9 @@ const Index = () => {
         </div>
       </section>
 
-      <OnboardingModal 
-        open={isOnboardingOpen} 
-        onOpenChange={setIsOnboardingOpen} 
+      <OnboardingModal
+        open={isOnboardingOpen}
+        onOpenChange={setIsOnboardingOpen}
         onSuccess={() => navigate('/dashboard')}
       />
     </div>
