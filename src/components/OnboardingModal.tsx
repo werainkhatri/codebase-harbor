@@ -5,10 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { useToast } from "@/components/ui/use-toast";
 import { Separator } from "@/components/ui/separator";
-import { GitBranchIcon, UploadIcon } from "lucide-react";
+import { GitBranchIcon, UploadIcon, GithubIcon } from "lucide-react";
 
 interface OnboardingModalProps {
   open: boolean;
@@ -59,7 +58,7 @@ const OnboardingModal: React.FC<OnboardingModalProps> = ({
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full mt-4">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="github" className="flex items-center gap-2">
-              <GitHubLogoIcon className="h-4 w-4" />
+              <GithubIcon className="h-4 w-4" />
               GitHub
             </TabsTrigger>
             <TabsTrigger value="upload" className="flex items-center gap-2">

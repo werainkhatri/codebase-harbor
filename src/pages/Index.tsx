@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { ShieldCheckIcon, CodeIcon, AlertTriangleIcon, ActivityIcon } from "lucide-react";
+import { ShieldCheckIcon, CodeIcon, AlertTriangleIcon, ActivityIcon, UploadIcon, FileTextIcon } from "lucide-react";
 import OnboardingModal from "@/components/OnboardingModal";
 
 const Index = () => {
