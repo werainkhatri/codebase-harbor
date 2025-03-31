@@ -1,9 +1,9 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ShieldCheckIcon, CodeIcon, AlertTriangleIcon, ActivityIcon, UploadIcon, FileTextIcon } from "lucide-react";
 import OnboardingModal from "@/components/OnboardingModal";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -11,6 +11,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Navbar />
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto max-w-6xl px-4 py-16 lg:py-24">
