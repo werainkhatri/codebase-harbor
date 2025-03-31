@@ -19,10 +19,10 @@ const Index = () => {
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
             <div>
               <h1 className="text-4xl font-bold mb-4 md:text-5xl lg:text-6xl">
-                Detect Alarm Issues in Your Code
+                Detect Service Issues in Your Code
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-                Automatically audit your codebase for alarm system issues, security vulnerabilities, and performance bottlenecks.
+                Automatically audit your codebase for service system issues, security vulnerabilities, and performance bottlenecks.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -99,7 +99,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">2. Automated Analysis</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Our system scans your codebase for alarm issues, security vulnerabilities, and performance bottlenecks.
+                Our system scans your codebase for service issues, security vulnerabilities, and performance bottlenecks.
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">

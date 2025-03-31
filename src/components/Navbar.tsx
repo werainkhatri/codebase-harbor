@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center gap-2 text-xl font-semibold">
             <HomeIcon className="h-5 w-5" />
-            <span>Code Alarm</span>
+            <span>Service Guardian</span>
           </Link>
         </div>
         <nav className="flex items-center gap-4">
