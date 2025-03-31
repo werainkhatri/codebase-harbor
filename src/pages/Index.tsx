@@ -19,7 +19,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div 
           className="relative w-full bg-cover bg-center min-h-[600px] flex items-center"
-          style={{ backgroundImage: "url('/lovable-uploads/6db13aea-fbff-477f-9b75-38ee70b2c361.png')" }}
+          style={{ backgroundImage: "url('/lovable-uploads/1a9c81b5-42c5-435a-95cf-8a6f29b6e4e5.jpeg')" }}
         >
           <div className="container mx-auto max-w-6xl px-4 py-16 lg:py-24 z-20 relative">
             <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
